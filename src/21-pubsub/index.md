@@ -2,7 +2,7 @@
 # this is the final blog post's id (used in the directory)
 # this id is part of the url, and should only contain:
 #   letters, numbers, dashes.
-id: 21-pubsub
+id: 25-pubsub
 
 breadcrumbs:
   - {name: "Take a look at pubsub on IPFS!", link: "./" }
@@ -103,7 +103,7 @@ even use it to send updates in a multiplayer game.
 
 ## What's next?
 The next steps for pubsub have to do with authentication. Currently, any peer
-can publish to any pubsub topic. In the near future,an authenticated mode for
+can publish to any pubsub topic. In the near future, an authenticated mode for
 pubsub topics, where only certain authorized peers -- those given a
 cryptographic key or capability -- can publish messages. We are still working
 out the sharing and capability granting model.
@@ -120,5 +120,5 @@ use cases, but we wanted to ship this now so you can get started using it for
 your applications, just like we're using it for Orbit.
 
 ## Enjoy!
-All that said, We hope you give `ipfs pubsub` a try and let us know how it goes!
+All that said, we hope you give `ipfs pubsub` a try and let us know how it goes!
 
