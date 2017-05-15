@@ -9,7 +9,7 @@ breadcrumbs:
 
 # the date here should be set to the final publication date,
 # on the day it is published.
-date: 2016-11-09
+date: 2017-05-15
 
 # this is the Title
 title: Take a look at pubsub on IPFS!
@@ -37,8 +37,9 @@ busy implementing other things and haven't had time to get to that yet.
 We have recently merged a simple, experimental pubsub implementation into go-ipfs.
 The implementation is experimental, and is very far from the performance and
 security levels we expect from our long-term target. But already, this feature
-does allow for some very useful and fun new applications to be developed. In
-this post I will explain how to get started using `ipfs pubsub` and give some
+does allow for some very useful and fun new applications to be developed.
+
+In this post, I will explain how to get started using `ipfs pubsub` and give some
 example applications that can and have been built using it.
 
 First off, to enable the pubsub code, make sure you're running a recent version
@@ -95,23 +96,23 @@ connection, or in networks with spotty connectivity to the global internet.
 
 Aside from chat, there are many interesting possibilities. In the near future,
 IPNS records will be pushed over pubsub, allowing lightning fast updates of
-peers' IPNS entries.  Peers could use pubsub to keep track of the head of some
+peers' IPNS entries. Peers could use pubsub to keep track of the head of some
 [merkle-linked global log](https://en.wikipedia.org/wiki/Blockchain_(database)).
 You can use pubsub to broadcast notifications to people in a social network, or
-even use it to send updates in a multiplayer game.
+send updates in a multiplayer game.
 
 
 ## What's next?
 The next steps for pubsub have to do with authentication. Currently, any peer
-can publish to any pubsub topic. In the near future,an authenticated mode for
+can publish to any pubsub topic. In the near future, an authenticated mode for
 pubsub topics, where only certain authorized peers -- those given a
 cryptographic key or capability -- can publish messages. We are still working
 out the sharing and capability granting model.
 
-After that, we are going to take a look at better message routing algorithms.
+After that, we will explore at better message routing algorithms.
 The current routing algorithm floods messages to every subscriber, resulting in
 some peers receiving the same message multiple times. Finding a better routing
-algorithm would go a long ways towards reducing that overhead.
+algorithm would go a long way towards reducing that overhead.
 
 Please note this can be quite bandwidth intensive, and it is intended as a very
 first pass approach. It works well for apps with few peers in the group, but
@@ -120,5 +121,5 @@ use cases, but we wanted to ship this now so you can get started using it for
 your applications, just like we're using it for Orbit.
 
 ## Enjoy!
-All that said, We hope you give `ipfs pubsub` a try and let us know how it goes!
+All that said, we hope you give `ipfs pubsub` a try and let us know how it goes.
 
